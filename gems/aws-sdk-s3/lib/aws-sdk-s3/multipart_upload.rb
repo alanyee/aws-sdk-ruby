@@ -272,7 +272,7 @@ module Aws::S3
         key: @object_key,
         upload_id: @id
       )
-      resp = @client.complete_multipart_upload(options)
+      @client.complete_multipart_upload(options)
       Object.new(
         bucket_name: @bucket_name,
         key: @object_key,
